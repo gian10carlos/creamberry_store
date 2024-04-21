@@ -1,13 +1,75 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Creamberry</title>
+  <title>Creamberry | ABC</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="./assets/img/logo_empresa.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
+<!-- LOADING PAGE -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      document.getElementById("loading-screen").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 2000);
+  });
+</script>
+
+<!-- CAROUSEL MULT -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+<script>
+  var glide04 = new Glide('.glide-04', {
+    type: 'carousel',
+    focusAt: 'center',
+    perView: 3,
+    autoplay: 2000,
+    animationDuration: 700,
+    gap: 24,
+    classes: {
+      activeNav: '[&>*]:bg-slate-700',
+    },
+    breakpoints: {
+      1024: {
+        perView: 2
+      },
+      640: {
+        perView: 1
+      }
+    },
+  });
+
+  glide04.mount();
+</script>
+
+<script>
+  var glide05 = new Glide('.glide-05', {
+      type: 'slider',
+      focusAt: 'center',
+      perView: 1,
+      autoplay: 2000,
+      animationDuration: 700,
+      gap: 0,
+      classes: {
+          activeNav: '[&>*]:bg-slate-700',
+      },
+
+  });
+
+  glide05.mount();
+</script>
+
 </html>
